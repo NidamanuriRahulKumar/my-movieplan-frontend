@@ -1,0 +1,72 @@
+<section>
+  <div class="custom-container">
+    <h3 style="color: red">{{ errorMessage }}</h3>
+    <form [formGroup]="seatForm" (ngSubmit)="addASeat()">
+      <div class="form-row">
+        <div class="form-group">
+          <div class="input-data">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="seatNumber"
+              required
+            />
+            <div class="underline"></div>
+            <label for="">Seat Number</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="type"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Type</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="price"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Price</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="status"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Status</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" class="btn btn-primary">Add Seat</button>
+      </div>
+    </form>
+  </div>
+</section>

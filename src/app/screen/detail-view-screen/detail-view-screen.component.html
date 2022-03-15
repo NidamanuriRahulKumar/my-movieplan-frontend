@@ -1,0 +1,121 @@
+<section id="detailMovie">
+  <div class="container">
+    <div class="details">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class="movieDetails-content">
+            <h2>{{ scr.screenName }}</h2>
+            <ul>
+              <li>
+                <div class="movieDetail-left">Screen Name:</div>
+                <div class="movieDetail-right">
+                  {{ scr.screenName }}
+                </div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Rows:</div>
+                <div class="movieDetail-right">{{ scr.rows }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Columns:</div>
+                <div class="movieDetail-right">{{ scr.columns }}</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/screen/update', scr.screenId]" class="theme-btn1"
+        ><i class="icofont-ticket"></i> Update</a
+      >
+      <!-- <button class="theme-btn" (click)="removeTheatre(theatre.theatreId)">
+        <i class="icofont-ticket"></i>Delete
+      </button> -->
+    </div>
+  </div>
+  <br /><br />
+  <div class="wrapper">
+    <main class="main">
+      <section class="section">
+        <ul class="adminList">
+          <li class="adminList__item">
+            <div class="adminList-link focus--box-shadow">
+              <div class="adminList-wrapper">
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Show Name</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>EndTime</strong>
+                  </span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>StartTime</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Date</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-setting">
+                  <span>
+                    <button
+                      [routerLink]="[
+                        '/show/add',
+                        theatre.theatreId,
+                        scr.screenId
+                      ]"
+                    >
+                      <strong>Add</strong>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <hr />
+        <ul class="adminList">
+          <li class="adminList__item" *ngFor="let sh of show">
+            <a
+              [routerLink]="['/show/view', sh.showId]"
+              class="adminList-link focus--box-shadow"
+            >
+              <div class="adminList-wrapper">
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{ sh.showName }}</span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{
+                    sh.showEndTime
+                  }}</span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{
+                    sh.showStartTime
+                  }}</span>
+                </div>
+
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{ sh.showDate }}</span>
+                </div>
+                <div class="adminList-element adminList-setting">
+                  <button
+                    class="focus--box-shadow"
+                    type="button"
+                    [routerLink]="['/screen/view', scr.screenId]"
+                  >
+                    <i class="icofont-caret-right"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</section>

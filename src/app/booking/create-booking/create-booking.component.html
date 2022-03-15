@@ -1,0 +1,56 @@
+<section id="booking">
+  <div class="custom-container">
+    <h3 style="color: red">{{ errorMessage }}</h3>
+    <form [formGroup]="bookingForm" (ngSubmit)="addABooking()">
+      <div class="form-row">
+        <!-- <div class="form-group">
+          <div class="input-data"> -->
+        <!-- <input
+              type="text"
+              class="form-control"
+              formControlName="transactionMode"
+              required
+            />
+            <div class="underline"></div>
+            <label for="">Transaction Mode</label> -->
+        <div class="wrap">
+          <input
+            type="radio"
+            id="rad1"
+            value="admin"
+            formControlName="transactionMode"
+          />
+          <label for="rad1">Online</label>
+          <input
+            type="radio"
+            id="rad2"
+            formControlName="transactionMode"
+            value="offline"
+          />
+          <label for="rad2">Offline</label>
+          <!-- </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="date">
+            <input
+              type="date"
+              class="form-control"
+              formControlName="bookingDate"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <button [routerLink]="['/movie']" type="submit" class="btn btn-danger">
+          Cancel
+        </button>
+        <button type="submit" class="btn btn-primary">
+          Proceed <i class="icofont-long-arrow-right"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

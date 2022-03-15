@@ -1,0 +1,118 @@
+<section id="detailMovie">
+  <div class="container">
+    <div class="details">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class="movieDetails-content">
+            <h2>{{ sh.showName }}</h2>
+            <ul>
+              <li>
+                <div class="movieDetail-left">Show Name:</div>
+                <div class="movieDetail-right">
+                  {{ sh.showName }}
+                </div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Date:</div>
+                <div class="movieDetail-right">{{ sh.showDate }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Start Time:</div>
+                <div class="movieDetail-right">{{ sh.showStartTime }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">End Time:</div>
+                <div class="movieDetail-right">{{ sh.showEndTime }}</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/show/update', sh.showId]" class="theme-btn1"
+        ><i class="icofont-ticket"></i> Update</a
+      >
+      <!-- <button class="theme-btn" (click)="removeTheatre(theatre.theatreId)">
+        <i class="icofont-ticket"></i>Delete
+      </button> -->
+    </div>
+  </div>
+  <br /><br />
+  <div class="wrapper">
+    <main class="main">
+      <section class="section">
+        <ul class="adminList">
+          <li class="adminList__item">
+            <div class="adminList-link focus--box-shadow">
+              <div class="adminList-wrapper">
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Name</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Language</strong>
+                  </span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Date</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Rating</strong>
+                  </span>
+                </div>
+                <div class="adminList-element adminList-setting">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <hr />
+        <ul class="adminList">
+          <li class="adminList__item" *ngFor="let mvee of movies">
+            <a
+              (click)="linkMovieToShow(mvee.movieId, sh.showId)"
+              class="adminList-link focus--box-shadow"
+            >
+              <div class="adminList-wrapper">
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{
+                    mvee.movieName
+                  }}</span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{
+                    mvee.movieLanguage
+                  }}</span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{
+                    mvee.movieDate
+                  }}</span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{
+                    mvee.movieRating
+                  }}</span>
+                </div>
+                <div class="adminList-element adminList-setting">
+                  <button
+                    class="focus--box-shadow buttn"
+                    type="button"
+                    (click)="linkMovieToShow(mvee.movieId, sh.showId)"
+                  >
+                    <i class="icofont-caret-right"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</section>

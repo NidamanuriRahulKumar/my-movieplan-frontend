@@ -1,0 +1,307 @@
+#detailMovie {
+  padding-top: 2rem;
+  color: #b6b7b9;
+  background: #13151f;
+  position: relative;
+  min-height: 90vh;
+}
+
+.details {
+  padding: 35px;
+  box-shadow: 0 0 20px #000000;
+  position: relative;
+}
+
+.details .movieDetails-content img {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movieDetails-content > p {
+  margin: 12px 0 30px;
+  position: relative;
+  padding-left: 70px;
+}
+.movieDetails-content > h2 + a.theme-btn {
+  margin: 12px 10px 20px 0;
+}
+
+.movieDetails-content > p::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 55px;
+  height: 2px;
+  margin: auto;
+  background: #eb315a;
+}
+
+.movieDetail-left {
+  color: #eb315a;
+  min-width: 100px;
+}
+
+.movieDetails-content ul li {
+  display: flex;
+  margin-top: 12px;
+  font-weight: 300;
+}
+
+.movieDetail-right .theme-btn {
+  margin: 0 8px;
+  padding: 2px 15px;
+}
+
+@media only screen and (max-width: 991px) {
+  .details .movieDetails-content img {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .movieDetails-content ul li {
+    display: block;
+  }
+
+  .movieDetails-content > p::before {
+    display: none;
+  }
+
+  .movieDetails-content > p {
+    padding: 0;
+  }
+
+  .movieDetails-content h2 {
+    font-size: 24px;
+  }
+
+  .details {
+    padding: 5px 15px 40px;
+  }
+
+  .transformers-content > h2 + a.theme-btn {
+    margin: 10px 5px 5px 0;
+  }
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.adminList__item {
+  text-decoration: none;
+  background-color: #13151f;
+  color: #b6b7b9;
+  box-shadow: 0 0 20px #000000;
+  transition: color 0.3s ease;
+}
+
+button {
+  padding: 0.85rem;
+  background-color: var(--white);
+  border: 0;
+  font-weight: #f8f8f8;
+  color: #242221;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.focus--box-shadow {
+  color: #b6b7b9;
+  background: #13151f;
+}
+
+.focus--box-shadow:focus {
+  z-index: 1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(145, 116, 216, 0.5);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.main {
+  width: calc(100% - 46.125rem);
+  margin: 0 3.75rem 6rem 1.875rem;
+}
+
+@media (max-width: 1800px) {
+  .main {
+    width: calc(100% - 38.8125rem);
+    margin: 0 3rem 6rem 1.5rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .main {
+    width: calc(100% - 33.8125rem);
+    margin: 0 2rem 6rem 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    width: calc(100% - 27.125rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    width: 100%;
+    order: 2;
+    margin: 0 1rem 6rem 1rem;
+  }
+}
+
+.section {
+  padding-top: 5rem;
+}
+
+.adminList-item:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.adminList-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #13151f;
+  box-shadow: 0 0 20px #000000;
+  padding: 1.5rem 0.7rem;
+  border-radius: 10px solid black;
+  transition: background-color 0.3s ease;
+}
+
+@media (hover: hover) {
+  .adminList-link:hover .adminList-inform-name {
+    color: #fc5185;
+  }
+}
+
+.adminList-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.adminList-element {
+  padding: 0 0.8rem;
+}
+
+.adminList-inform {
+  width: 28%;
+}
+
+.adminList-setting {
+  width: 8%;
+  text-align: center;
+}
+
+.adminList-inform-name {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: white;
+}
+
+@media (max-width: 1800px) {
+  .adminList-link {
+    padding: 1.2rem 0.7rem;
+  }
+
+  .adminList-element {
+    padding: 0 0.5rem;
+  }
+
+  .adminList-inform-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .adminList-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .adminList-inform {
+    order: 2;
+    width: calc(100% - 90px);
+    margin-bottom: 1.5rem;
+    padding-right: 4rem;
+  }
+
+  .adminList-setting {
+    position: absolute;
+    top: 0;
+    right: 0;
+    order: 3;
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .adminList-link {
+    padding: 1rem 0.5rem;
+  }
+
+  .adminList-element {
+    padding: 0 0.3rem;
+  }
+
+  .adminList-inform {
+    padding-right: 3rem;
+  }
+
+  .adminList-setting {
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .adminList-date {
+    order: 5;
+    width: 50%;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .adminList-icon {
+    max-width: 50px;
+    min-width: 50px;
+  }
+
+  .adminList-inform {
+    width: calc(100% - 55px);
+  }
+}

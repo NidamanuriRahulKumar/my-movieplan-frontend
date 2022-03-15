@@ -1,0 +1,112 @@
+<section id="detailMovie">
+  <div class="container">
+    <div class="details">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class="movieDetails-content">
+            <h2>{{ theatre.theatreName }}</h2>
+            <ul>
+              <li>
+                <div class="movieDetail-left">Theatre:</div>
+                <div class="movieDetail-right">
+                  {{ theatre.theatreName }}
+                </div>
+              </li>
+              <li>
+                <div class="movieDetail-left">City:</div>
+                <div class="movieDetail-right">{{ theatre.theatreCity }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Manager:</div>
+                <div class="movieDetail-right">{{ theatre.managerName }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">manager Contact:</div>
+                <div class="movieDetail-right">
+                  {{ theatre.managerContact }}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a
+        [routerLink]="['/theatre/update', theatre.theatreId]"
+        class="theme-btn1"
+        ><i class="icofont-ticket"></i> Update</a
+      >
+      <button class="theme-btn" (click)="removeTheatre(theatre.theatreId)">
+        <i class="icofont-ticket"></i>Delete
+      </button>
+    </div>
+  </div>
+  <br /><br />
+  <div class="wrapper">
+    <main class="main">
+      <section class="section">
+        <ul class="adminList">
+          <li class="adminList__item">
+            <div class="adminList-link focus--box-shadow">
+              <div class="adminList-wrapper">
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Screen Name</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Rows</strong>
+                  </span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong>Columns</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-setting">
+                  <span>
+                    <button [routerLink]="['/screen/add', theatre.theatreId]">
+                      <strong>Add</strong>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <hr />
+        <ul class="adminList">
+          <li class="adminList__item" *ngFor="let scr of theatre.screen">
+            <a
+              [routerLink]="['/screen/view', scr.screenId]"
+              class="adminList-link focus--box-shadow"
+            >
+              <div class="adminList-wrapper">
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{
+                    scr.screenName
+                  }}</span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{ scr.rows }}</span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name">{{ scr.columns }}</span>
+                </div>
+                <div class="adminList-element adminList-setting">
+                  <button
+                    class="focus--box-shadow"
+                    type="button"
+                    [routerLink]="['/screen/view', scr.screenId]"
+                  >
+                    <i class="icofont-caret-right"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</section>

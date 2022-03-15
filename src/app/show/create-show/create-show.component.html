@@ -1,0 +1,79 @@
+<section>
+  <div class="custom-container">
+    <h3 style="color: red">{{ errorMessage }}</h3>
+    <!-- <h3>CREATE SHOW</h3> -->
+    <form [formGroup]="showForm" (ngSubmit)="addAShow()">
+      <div class="form-row">
+        <div class="form-group">
+          <div class="input-data">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="showName"
+              required
+            />
+            <div class="underline"></div>
+            <label for="">Show Name</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="date"
+                class="form-control"
+                formControlName="showDate"
+                required
+              />
+              <div class="underline"></div>
+              <!-- <label for="">Show Date</label> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="datetime-local"
+                class="form-control"
+                formControlName="showStartTime"
+                required
+              />
+              <div class="underline"></div>
+              <!--  <label for="">Show Start Time</label> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="datetime-local"
+                class="form-control"
+                formControlName="showEndTime"
+                required
+              />
+              <div class="underline"></div>
+              <!-- <label for="">Show End Time</label> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!showForm.valid"
+        >
+          Add Show
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+<section id="detailMovie">
+  <div class="container">
+    <div class="section-title">
+      <h1><i class="icofont icofont-film"></i>{{ mvee.movieName }}</h1>
+    </div>
+    <hr />
+    <div class="details">
+      <div class="row flexbox-center">
+        <div class="col-lg-5 text-lg-left text-center">
+          <div class="movieDetails-content">
+            <img src="assets/img/portfolio5.png" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="movieDetails-content">
+            <h2>{{ mvee.movieName }}</h2>
+            <p>{{ mvee.movieGenre }}</p>
+            <ul>
+              <li>
+                <div class="movieDetail-left">Movie:</div>
+                <div class="movieDetail-right">
+                  <a href="#">{{ mvee.movieName }}</a>
+                </div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Time:</div>
+                <div class="movieDetail-right">{{ mvee.movieHours }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Release:</div>
+                <div class="movieDetail-right">{{ mvee.movieDate }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Language:</div>
+                <div class="movieDetail-right">{{ mvee.movieLanguage }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Rating:</div>
+                <div class="movieDetail-right">{{ mvee.movieRating }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Description:</div>
+                <div class="movieDetail-right">
+                  {{ mvee.movieDescription }}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a
+        [routerLink]="['/theatre/viewbyMovie/', mvee.movieId]"
+        class="theme-btn"
+        ><i class="icofont-ticket"></i> BOOK MOVIE</a
+      >
+    </div>
+  </div>
+</section>

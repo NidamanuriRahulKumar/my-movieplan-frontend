@@ -1,0 +1,158 @@
+.custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background: #13151f;
+  width: 100%;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  overflow: hidden;
+  background: #13151f;
+}
+.custom-container .text {
+  text-align: center;
+  font-size: 35px;
+  -webkit-text-fill-color: transparent;
+}
+.custom-container form {
+  padding: 30px 0 0 0;
+}
+.custom-container form .form-row {
+  display: flex;
+  margin: 32px 0;
+}
+form .form-row .input-data {
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+
+  position: relative;
+}
+form .form-row .textarea {
+  height: 70px;
+}
+
+.date {
+  padding-left: 1rem;
+}
+
+.input-data input,
+.textarea textarea,
+.date input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+.textarea textarea {
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label {
+  width: 100%;
+  bottom: 40px;
+  background: #13151f;
+}
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before {
+  transform: scale(1);
+}
+
+@media (max-width: 700px) {
+  .custom-container .text {
+    font-size: 30px;
+  }
+  .custom-container form {
+    padding: 10px 0 0 0;
+  }
+  .custom-container form .form-row {
+    display: block;
+  }
+  form .form-row .input-data {
+    margin: 35px 0 !important;
+  }
+}
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  margin-bottom: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  margin: 10px 10px;
+  margin-right: 2rem;
+  color: white;
+}
+
+label:before {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  transition: box-shadow 0.4s ease, background 0.3s ease;
+}
+
+input:checked + label:before {
+  box-shadow: inset 0px 3px 0 2px rgb(255, 255, 255);
+  background: #13151f;
+}
+
+button {
+  margin-left: 1rem;
+}
+
+.date {
+  margin-left: 0.2rem;
+}

@@ -1,0 +1,85 @@
+<section id="detailMovie">
+  <div class="fab-container">
+    <div class="fab fab-icon-holder">
+      <a [routerLink]="['/movie/admin/list']">
+        <i class="fas fa-backward"></i>
+      </a>
+    </div>
+
+    <ul class="fab-options">
+      <li>
+        <span class="fab-label">Movies</span>
+        <div class="fab-icon-holder">
+          <a [routerLink]="['/movie/admin/list']">
+            <i class="fas fa-film"></i>
+          </a>
+        </div>
+      </li>
+      <li>
+        <span class="fab-label">Theatres</span>
+        <div class="fab-icon-holder">
+          <a [routerLink]="['/theatre']"><i class="fas fa-warehouse"></i> </a>
+        </div>
+      </li>
+      <li>
+        <span class="fab-label">Bookings</span>
+        <div class="fab-icon-holder">
+          <i class="fas fa-ticket-alt"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="details">
+      <div class="row flexbox-center">
+        <div class="col-lg-5 text-lg-left text-center">
+          <div class="movieDetails-content">
+            <img src="assets/img/portfolio5.png" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="movieDetails-content">
+            <h2>{{ mvee.movieName }}</h2>
+            <p>{{ mvee.movieGenre }}</p>
+            <ul>
+              <li>
+                <div class="movieDetail-left">Movie:</div>
+                <div class="movieDetail-right">
+                  {{ mvee.movieName }}
+                </div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Time:</div>
+                <div class="movieDetail-right">{{ mvee.movieHours }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Release:</div>
+                <div class="movieDetail-right">{{ mvee.movieDate }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Language:</div>
+                <div class="movieDetail-right">{{ mvee.movieLanguage }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Rating:</div>
+                <div class="movieDetail-right">{{ mvee.movieRating }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Description:</div>
+                <div class="movieDetail-right">
+                  {{ mvee.movieDescription }}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/movie/update', mvee.movieId]" class="theme-btn1"
+        ><i class="icofont-ticket"></i> Update</a
+      >
+      <button class="theme-btn" (click)="removeMovie(mvee.movieId)">
+        <i class="icofont-ticket"></i>Delete
+      </button>
+    </div>
+  </div>
+</section>

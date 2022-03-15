@@ -1,0 +1,144 @@
+#detailMovie {
+  color: #13151f;
+  background: white;
+  position: relative;
+}
+
+.details {
+  padding: 35px;
+  box-shadow: 0 0 20px black;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.details .movieDetails-content img {
+  display: block;
+  position: relative;
+}
+
+.movieDetails-content > p {
+  margin: 12px 0 30px;
+  position: relative;
+  padding-left: 70px;
+}
+.movieDetails-content > h2 + a.theme-btn {
+  margin: 12px 10px 20px 0;
+}
+
+.movieDetails-content > p::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 55px;
+  height: 2px;
+  margin: auto;
+  background: #eb315a;
+}
+
+.movieDetail-left {
+  color: #eb315a;
+  min-width: 100px;
+}
+
+.movieDetails-content ul li {
+  display: flex;
+  margin-top: 12px;
+  font-weight: 300;
+}
+
+.movieDetail-right .theme-btn {
+  margin: 0 8px;
+  padding: 2px 15px;
+}
+
+.theme-btn {
+  background: #e91919;
+  border: 1px solid #e91919;
+  color: #fff;
+  border-radius: 35px;
+  padding: 5px 25px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.theme-btn:hover {
+  border: 1px solid #e91919;
+  background: transparent;
+  color: #e91919;
+}
+
+.details > .theme-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px 0 0;
+}
+
+.theme-btn1 {
+  background: #5089df;
+  border: 1px solid #5089df;
+  color: #fff;
+  border-radius: 35px;
+  padding: 5px 25px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.theme-btn1:hover {
+  border: 1px solid #5089df;
+  background: transparent;
+  color: #5089df;
+}
+
+.details > .theme-btn1 {
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  border-radius: 5px 0 0;
+}
+
+input,
+textarea {
+  display: block;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (max-width: 991px) {
+  .details .movieDetails-content img {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .movieDetails-content ul li {
+    display: block;
+  }
+
+  .movieDetails-content > p::before {
+    display: none;
+  }
+
+  .movieDetails-content > p {
+    padding: 0;
+  }
+
+  .movieDetails-content h2 {
+    font-size: 24px;
+  }
+
+  .details {
+    padding: 5px 15px 40px;
+  }
+
+  .transformers-content > h2 + a.theme-btn {
+    margin: 10px 5px 5px 0;
+  }
+}

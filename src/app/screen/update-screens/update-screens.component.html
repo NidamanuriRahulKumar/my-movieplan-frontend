@@ -1,0 +1,44 @@
+<section id="detailMovie">
+  <div class="container">
+    <div class="details">
+      <div class="row flexbox-center">
+        <div class="col-lg-5 text-lg-left text-center"></div>
+        <div class="col-lg-7">
+          <div class="movieDetails-content">
+            <h2>{{ scre.screenName }}</h2>
+            <ul>
+              <li>
+                <div class="movieDetail-left">Screen:</div>
+                <input
+                  class="movieDetail-right"
+                  [(ngModel)]="scre.screenName"
+                  name="name"
+                />
+              </li>
+              <li>
+                <div class="movieDetail-left">Rows:</div>
+                <input
+                  class="movieDetail-right"
+                  [(ngModel)]="scre.rows"
+                  name="rows"
+                />
+              </li>
+              <li>
+                <div class="movieDetail-left">Columns:</div>
+                <input
+                  class="movieDetail-right"
+                  [(ngModel)]="scre.columns"
+                  name="columns"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/screen/view', scre.screenId]" class="theme-btn1"
+        ><i class="icofont-ticket"></i> Update</a
+      >
+      <!--<a href="#" class="theme-btn"><i class="icofont-ticket"></i> Cancel</a>-->
+    </div>
+  </div>
+</section>

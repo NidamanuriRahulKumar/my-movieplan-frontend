@@ -1,0 +1,49 @@
+<section id="detailMovie">
+  <form (ngSubmit)="updateATheatre()">
+    <div class="container">
+      <div class="details">
+        <div class="row justify-content-md-center flexbox-center">
+          <div class="col-lg-auto">
+            <div class="movieDetails-content">
+              <h2>{{ theatre.theatreName }}</h2>
+              <ul>
+                <li>
+                  <div class="movieDetail-left">Theatre City:</div>
+                  <input
+                    class="movieDetail-right"
+                    [(ngModel)]="theatre.theatreCity"
+                    name="name"
+                  />
+                </li>
+                <li>
+                  <div class="movieDetail-left">Manager Name:</div>
+                  <input
+                    class="movieDetail-right"
+                    [(ngModel)]="theatre.managerName"
+                    name="hours"
+                  />
+                </li>
+                <li>
+                  <div class="movieDetail-left">Manager Contact:</div>
+                  <input
+                    type="date"
+                    class="movieDetail-right"
+                    [(ngModel)]="theatre.managerContact"
+                    name="date"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <button type="submit" class="theme-btn1">
+          <i class="icofont-ticket"></i> Update
+        </button>
+        <a [routerLink]="['/theatre/view', theatre.theatreId]" class="theme-btn"
+          ><i class="icofont-ticket"></i> Cancel</a
+        >
+      </div>
+    </div>
+  </form>
+</section>

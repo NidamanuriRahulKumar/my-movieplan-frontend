@@ -1,0 +1,31 @@
+<section id="ticket">
+  <div class="custom-container">
+    <h3 style="color: red">{{ errorMessage }}</h3>
+    <form [formGroup]="ticketForm" (ngSubmit)="addATicket()">
+      <div class="form-row">
+        <div class="form-group">
+          <div class="input-data">
+            <input
+              type="number"
+              class="form-control"
+              formControlName="noOfSeats"
+              required
+            />
+            <div class="underline"></div>
+            <label for="">No of Seats</label>
+          </div>
+        </div>
+      </div>
+      <select class="form-select" multiple formControlName="seats">
+        <option value="">Choose Seats</option>
+        <option *ngFor="let s of seats" [ngValue]="s">
+          {{ s.seatNumber }} | {{ s.type }}
+        </option>
+      </select>
+
+      <div>
+        <button type="submit" class="btn btn-primary">Add Booking</button>
+      </div>
+    </form>
+  </div>
+</section>

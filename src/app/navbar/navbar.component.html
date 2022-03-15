@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand mx-3" [routerLink]="['']">
+    <i><img src="assets/icon/play.png" alt="" /></i>
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarText"
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <div class="mainmenu">
+      <ul id=" navbar-nav primary-menu mr-auto">
+        <li class="nav-item">
+          <a routerLinkActive="active" class="nav-link" [routerLink]="['']"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a routerLinkActive="active" class="nav-link" [routerLink]="['movie']"
+            >Movies</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="lService.userRole">
+          <a
+            routerLinkActive="active"
+            class="nav-link"
+            [routerLink]="['/movie/admin/list']"
+            >Dashboard</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="lService.userRole">
+          <a
+            routerLinkActive="active"
+            class="nav-link"
+            [routerLink]="['theatre']"
+            >Theatres</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="lService.userRole">
+          <a
+            routerLinkActive="active"
+            class="nav-link"
+            [routerLink]="['screen']"
+            >Screens</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="lService.userRole">
+          <a routerLinkActive="active" class="nav-link" [routerLink]="['show']"
+            >Shows</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="lService.userRole">
+          <a
+            routerLinkActive="active"
+            class="nav-link"
+            [routerLink]="['/booking']"
+            >Bookings</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="lService.userRole">
+          <a
+            routerLinkActive="active"
+            class="nav-link"
+            [routerLink]="['/customer']"
+            >Customers</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="lService.userRole">
+          <a routerLinkActive="active" class="nav-link" [routerLink]="['/seat']"
+            >Seats</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button
+    *ngIf="lService.isLoginStatus && !lService.userRole"
+    [routerLink]="['/customer/update/', lService.customerId]"
+    class="edit-btn theme-btn"
+  >
+    Edit Profile
+  </button>
+  <button
+    *ngIf="!lService.isLoginStatus"
+    [routerLink]="['/signIn']"
+    class="login-btn theme-btn"
+  >
+    Login
+  </button>
+  <button
+    *ngIf="lService.isLoginStatus"
+    (click)="Logout()"
+    class="login-btn theme-btn"
+  >
+    Logout
+  </button>
+</nav>

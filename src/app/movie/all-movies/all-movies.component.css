@@ -1,0 +1,117 @@
+#movies {
+  padding: 2%;
+  color: #b6b7b9;
+  background: #13151f;
+  position: relative;
+  min-height: 90vh;
+}
+.section-title h1 i {
+  color: #fece50;
+  font-size: 40px;
+  margin: 0 1rem 0 1rem;
+}
+hr {
+  margin-bottom: 1rem;
+  border-top: 1px solid #ddd;
+}
+.row {
+  margin: 3rem 0rem 0rem 0rem;
+}
+
+.filter {
+  width: 100%;
+  height: 400px;
+}
+.movies-box {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2);
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-top: 3px #b8b8b8;
+}
+.movies-img {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  cursor: none;
+}
+.movies-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.movies-box a {
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  display: -webkit-box;
+  max-width: 80%;
+  -webkit-line-clamp: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #c9c9c9;
+  margin: 20px;
+}
+.movies-box:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.2s;
+}
+.movies-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-menu {
+  padding-top: 30px;
+}
+
+.portfolio-menu li {
+  display: inline-block;
+  position: relative;
+  margin-left: 15px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.portfolio-menu li::before {
+  background: transparent;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  transition: 0.4s;
+  content: "";
+  height: 4px;
+  position: absolute;
+  z-index: 99;
+}
+
+.portfolio-menu li.active {
+  color: #fff;
+}
+
+.portfolio-menu li.active::before,
+.portfolio-menu li:hover::before {
+  background: #eb315a;
+}
+
+.section-title {
+  margin-top: 1rem;
+}
+
+.search {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.548);
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.911);
+}

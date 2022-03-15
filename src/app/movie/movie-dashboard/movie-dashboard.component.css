@@ -1,0 +1,391 @@
+ul,
+ol {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #242221;
+  transition: color 0.3s ease;
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: #fc5185;
+  }
+}
+
+button {
+  padding: 0.85rem;
+  background-color: rgb(255, 254, 254);
+  border: 0;
+  color: #000000;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(145, 116, 216, 0.5);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.focus--box-shadow:focus {
+  z-index: 1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(145, 116, 216, 0.5);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #e9e8ec;
+  font-size: 16px;
+  color: #242221;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.main {
+  width: calc(100% - 46.125rem);
+  margin: 0 3.75rem 6rem 1.875rem;
+}
+
+@media (max-width: 1800px) {
+  .main {
+    width: calc(100% - 38.8125rem);
+    margin: 0 3rem 6rem 1.5rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .main {
+    width: calc(100% - 33.8125rem);
+    margin: 0 2rem 6rem 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    width: calc(100% - 27.125rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    width: 100%;
+    order: 2;
+    margin: 0 1rem 6rem 1rem;
+  }
+}
+
+.section {
+  padding-top: 5rem;
+}
+
+.adminList-item:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.adminList-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 1.5rem 0.7rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button .theme-btn {
+  background-color: none;
+}
+
+@media (hover: hover) {
+  .adminList-link:hover .adminList-inform-name {
+    color: #fc5185;
+  }
+}
+
+.adminList__item:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.adminList-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.adminList-element {
+  padding: 0 0.8rem;
+}
+
+.adminList-inform {
+  width: 28%;
+}
+
+.adminList-setting {
+  width: 8%;
+  text-align: center;
+}
+
+.adminList-inform-name {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #242221;
+}
+
+@media (max-width: 1800px) {
+  .adminList-link {
+    padding: 1.2rem 0.7rem;
+  }
+
+  .adminList-element {
+    padding: 0 0.5rem;
+  }
+
+  .adminList-inform-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .adminList-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .adminList-inform {
+    order: 2;
+    width: calc(100% - 90px);
+    margin-bottom: 1.5rem;
+    padding-right: 4rem;
+  }
+
+  .adminList-setting {
+    position: absolute;
+    top: 1.2rem;
+    right: 0.7rem;
+    order: 3;
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .adminList-link {
+    padding: 1rem 0.5rem;
+  }
+
+  .adminList-element {
+    padding: 0 0.3rem;
+  }
+
+  .adminList-inform {
+    padding-right: 3rem;
+  }
+
+  .adminList-setting {
+    right: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .adminList-date {
+    order: 5;
+    width: 50%;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .adminList-icon {
+    max-width: 50px;
+    min-width: 50px;
+  }
+
+  .adminList-inform {
+    width: calc(100% - 55px);
+  }
+}
+
+.nav {
+  display: flex;
+  width: 5.6rem;
+  height: calc(100vh - 19.25rem);
+  min-height: 40rem;
+  max-height: 50rem;
+  margin: 11.53rem 2.45rem;
+  padding: 7.5rem 0.825rem;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px;
+  font-size: 0;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+@media (hover: hover) {
+  .nav-link:hover {
+    background-color: #fc5185;
+  }
+
+  .nav-link:hover .nav-icon path {
+    fill: #f8f8f8;
+  }
+}
+
+.nav-item-isActive .nav-link {
+  background-color: #242221;
+}
+
+.nav-item-isActive .nav-link .nav-icon path {
+  fill: #f8f8f8;
+}
+
+.nav-item-isActive .nav-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(36, 34, 33, 0.5);
+}
+
+.nav-icon {
+  width: 100%;
+}
+
+@media (max-width: 1800px) {
+  .nav {
+    width: 4.6875rem;
+    height: calc(100vh - 16.25rem);
+    min-height: 35rem;
+    max-height: 45rem;
+    margin: 9.625rem 1.5rem;
+    padding: 7.5rem 0.625rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .nav {
+    height: calc(100vh - 21.25rem);
+    margin: 7.625rem 1rem;
+    padding: 5.5rem 0.625rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    z-index: 5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 27.125rem);
+    height: auto;
+    min-height: auto;
+    margin: 0 1rem;
+    padding: 0.5rem 5rem;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 3px 10px 4px rgba(36, 34, 33, 0.2);
+  }
+
+  .nav-list {
+    justify-content: space-around;
+  }
+
+  .nav-item {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    width: calc(100% - 2rem);
+  }
+
+  .nav-item {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.fab-icon-holder {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #016fb9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fab-icon-holder:hover {
+  opacity: 0.8;
+}
+
+.fab-icon-holder i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-style: 25px;
+  color: #fff;
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  background: #eb315a;
+}
+
+.fab-options {
+  list-style-type: none;
+  margin: 0;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  transform-origin: 85% bottom;
+}
+
+.fab:hover + .fab-options,
+.fab-options:hover {
+  opacity: 1;
+  transform: scale(1);
+}

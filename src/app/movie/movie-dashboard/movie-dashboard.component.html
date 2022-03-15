@@ -1,0 +1,130 @@
+<div class="wrapper">
+  <div class="fab-container">
+    <div class="fab fab-icon-holder">
+      <a [routerLink]="['/movie/add']">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
+  </div>
+  <nav class="nav">
+    <ul class="nav-list" role="menubar">
+      <li class="nav-item nav-item-isActive">
+        <a
+          [routerLink]="['/home']"
+          class="nav-link focus--box-shadow"
+          role="menuitem"
+          aria-label="Home"
+        >
+          <svg
+            class="nav-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            role="presentation"
+          >
+            <path
+              fill="#6563ff"
+              d="M20,8h0L14,2.74a3,3,0,0,0-4,0L4,8a3,3,0,0,0-1,2.26V19a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V10.25A3,3,0,0,0,20,8ZM14,20H10V15a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1Zm5-1a1,1,0,0,1-1,1H16V15a3,3,0,0,0-3-3H11a3,3,0,0,0-3,3v5H6a1,1,0,0,1-1-1V10.25a1,1,0,0,1,.34-.75l6-5.25a1,1,0,0,1,1.32,0l6,5.25a1,1,0,0,1,.34.75Z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          [routerLink]="['/movie/admin/list']"
+          class="nav-link focus--box-shadow"
+          role="menuitem"
+          aria-label="Favorite projects"
+        >
+          <img src="assets/icon/movie-film.png" alt="" />
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          [routerLink]="['/theatre']"
+          class="nav-link focus--box-shadow"
+          role="menuitem"
+          aria-label="Informational messages"
+          ><img src="assets/icon/screen.png" alt="" />
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          [routerLink]="['/booking']"
+          class="nav-link focus--box-shadow"
+          role="menuitem"
+          aria-label="Analytics"
+        >
+          <img src="assets/icon/ticket.png" alt="" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="main">
+    <section class="section">
+      <ul class="adminList">
+        <li class="adminList__item">
+          <div class="adminList-link focus--box-shadow">
+            <div class="adminList-wrapper">
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name"><strong>Name</strong></span>
+              </div>
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name"
+                  ><strong>Language</strong>
+                </span>
+              </div>
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name"><strong>Date</strong></span>
+              </div>
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name"
+                  ><strong>Rating</strong>
+                </span>
+              </div>
+              <div class="adminList-element adminList-setting">
+                <button [routerLink]="['/movie/add']">Add</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul class="adminList">
+        <li class="adminList__item" *ngFor="let mvee of movies">
+          <a
+            [routerLink]="['/movie/admin/details', mvee.movieId]"
+            class="adminList-link focus--box-shadow"
+          >
+            <div class="adminList-wrapper">
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name">{{ mvee.movieName }}</span>
+              </div>
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name">{{
+                  mvee.movieLanguage
+                }}</span>
+              </div>
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name">{{ mvee.movieDate }}</span>
+              </div>
+              <div class="adminList-element adminList-inform">
+                <span class="adminList-inform-name">{{
+                  mvee.movieRating
+                }}</span>
+              </div>
+              <div class="adminList-element adminList-setting">
+                <button
+                  class="focus--box-shadow buttn"
+                  type="button"
+                  [routerLink]="['/movie/admin/details', mvee.movieId]"
+                >
+                  <i class="icofont-caret-right"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</div>

@@ -1,0 +1,81 @@
+<section class="home">
+    <section class="latest-movies" id="home">
+        <div class="container">
+            <div class="section-title-latest">
+                <h1><i class="icofont icofont-history"></i>Latest Movie</h1>
+            </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item" *ngFor="let movie of latestMovies; let i = index" [ngClass]="{ active: i == 0 }">
+                        <div class="latest-movies-slider">
+                            <div class="row latest-movies-slide">
+                                <div class="col-lg-6 col-md-5">
+                                    <div class="latest-movies-content">
+                                        <img src="assets/img/portfolio{{ i }}.png" alt="No image Uploaded" />
+                                    </div>
+                                </div>
+                                <div class="details col-lg-6 col-md-7">
+                                    <div class="latest-movies-content">
+                                        <h2>
+                                            <strong>{{ movie.movieName }} </strong>
+                                        </h2>
+                                        <p>
+                                            <i>{{ movie.movieGenre }}</i>
+                                        </p>
+                                        <p>Language - {{ movie.movieLanguage }}</p>
+                                        <p>
+                                            Description - {{ movie.movieDescription }}
+                                        </p>
+                                        <div class="book-movie">
+                                            <h3>Book Movie</h3>
+                                            <a class="theme-btn" [routerLink]="['/movie/view', movie.movieId]"><i class="icofont icofont-ticket"></i> Book
+                      </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="topRatedMovies">
+        <div class="container">
+            <div class="section-title">
+                <h1><i class="icofont icofont-movie"></i> Top Rated Movies</h1>
+            </div>
+            <hr />
+            <div class="row topMovie-item">
+                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let movie of topRatedMovies; let i = index">
+                    <div class="topMovies">
+                        <div class="topMovies-img">
+                            <img src="assets/img/portfolio{{ i }}.png" alt="portfolio" />
+                            <a [routerLink]="['/movie/view', movie.movieId]" class="popup-book">
+                                <i class="icofont-ui-movie"></i>
+                            </a>
+                        </div>
+                        <div class="topMovie-content">
+                            <h2>{{ movie.movieName }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<router-outlet></router-outlet>

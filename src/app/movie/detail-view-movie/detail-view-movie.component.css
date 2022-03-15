@@ -1,0 +1,120 @@
+#detailMovie {
+  color: #b6b7b9;
+  background: #13151f;
+  position: relative;
+  min-height: 90vh;
+}
+.section-title h1 i {
+  color: #fece50;
+  font-size: 40px;
+  margin: 2rem 1rem 0 1rem;
+}
+hr {
+  margin: 0;
+  border-top: 2px solid #ddd;
+}
+
+.details {
+  padding: 35px;
+  box-shadow: 0 0 20px #000000;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.details .movieDetails-content img {
+  display: block;
+  position: relative;
+}
+
+.movieDetails-content > p {
+  margin: 12px 0 30px;
+  position: relative;
+  padding-left: 70px;
+}
+.movieDetails-content > h2 + a.theme-btn {
+  margin: 12px 10px 20px 0;
+}
+
+.movieDetails-content > p::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 55px;
+  height: 2px;
+  margin: auto;
+  background: #eb315a;
+}
+
+.movieDetail-left {
+  color: #eb315a;
+  min-width: 100px;
+}
+
+.movieDetails-content ul li {
+  display: flex;
+  margin-top: 12px;
+  font-weight: 300;
+}
+
+.movieDetail-right .theme-btn {
+  margin: 0 8px;
+  padding: 2px 15px;
+}
+
+.theme-btn {
+  background: #eb315a;
+  border: 1px solid #eb315a;
+  color: #fff;
+  border-radius: 35px;
+  padding: 5px 25px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.theme-btn:hover {
+  border: 1px solid #eb315a;
+  background: transparent;
+  color: #eb315a;
+}
+
+.details > .theme-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px 0 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .details .movieDetails-content img {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .movieDetails-content ul li {
+    display: block;
+  }
+
+  .movieDetails-content > p::before {
+    display: none;
+  }
+
+  .movieDetails-content > p {
+    padding: 0;
+  }
+
+  .movieDetails-content h2 {
+    font-size: 24px;
+  }
+
+  .details {
+    padding: 5px 15px 40px;
+  }
+
+  .transformers-content > h2 + a.theme-btn {
+    margin: 10px 5px 5px 0;
+  }
+}

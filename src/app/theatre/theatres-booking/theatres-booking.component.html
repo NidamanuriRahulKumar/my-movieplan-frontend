@@ -1,0 +1,147 @@
+<section id="detailMovie">
+  <div class="container">
+    <div class="details">
+      <div class="row flexbox-center">
+        <div class="col-lg-5 text-lg-left text-center">
+          <div class="movieDetails-content">
+            <img src="assets/img/portfolio5.png" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="movieDetails-content">
+            <ul>
+              <li>
+                <div class="movieDetail-left">Movie:</div>
+                <div class="movieDetail-right">
+                  <a href="#">{{ mvee.movieName }}</a>
+                </div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Time:</div>
+                <div class="movieDetail-right">{{ mvee.movieHours }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Release:</div>
+                <div class="movieDetail-right">{{ mvee.movieDate }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Language:</div>
+                <div class="movieDetail-right">{{ mvee.movieLanguage }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Rating:</div>
+                <div class="movieDetail-right">{{ mvee.movieRating }}</div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Description:</div>
+                <div class="movieDetail-right">
+                  {{ mvee.movieDescription }}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <main class="main">
+      <section class="section">
+        <ul class="adminList">
+          <li class="adminList__item">
+            <a
+              href="#"
+              style="pointer-events: none"
+              class="adminList-link focus--box-shadow"
+            >
+              <div class="adminList-wrapper">
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong style="color: #fc5185">Theatre</strong></span
+                  >
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong style="color: #fc5185">Screen Name</strong>
+                  </span>
+                </div>
+                <div class="adminList-element adminList-inform">
+                  <span class="adminList-inform-name"
+                    ><strong style="color: #fc5185">Show Details</strong>
+                  </span>
+                </div>
+                <div class="adminList-element adminList-setting">
+                  <span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="adminList">
+          <li class="adminList__item">
+            <div class="adminList__item" *ngFor="let m of theatres">
+              <div class="adminList__item" *ngFor="let s of m.screen">
+                <div class="adminList__item" *ngFor="let sh of s.show">
+                  <div class="adminList-wrapper">
+                    <div class="adminList-element adminList-inform">
+                      <span class="adminList-inform-name">{{
+                        m.theatreName
+                      }}</span
+                      ><br />
+                      <span class="adminList-inform-name"
+                        ><small>
+                          <i> {{ m.theatreCity }}</i>
+                        </small>
+                      </span>
+                    </div>
+                    <div class="adminList-element adminList-inform">
+                      <span class="adminList-inform-name">{{
+                        s.screenName
+                      }}</span>
+                    </div>
+                    <div class="adminList-element adminList-inform">
+                      <span class="adminList-inform-name">{{
+                        sh.showName
+                      }}</span>
+                      <br />
+                      <span class="adminList-inform-name"
+                        ><small> Start-Time </small>
+                      </span>
+                      -
+                      <span class="adminList-inform-name"
+                        ><small> End-Time </small>
+                      </span>
+                      <br />
+                      <span class="adminList-inform-name"
+                        ><small style="color: rgba(255, 255, 255, 0.6)">
+                          {{ sh.showStartTime }}
+                        </small>
+                      </span>
+                      -
+                      <span class="adminList-inform-name"
+                        ><small style="color: rgba(255, 255, 255, 0.6)">
+                          {{ sh.showEndTime }}
+                        </small>
+                      </span>
+                    </div>
+                    <div class="adminList-element adminList-setting">
+                      <button
+                        [routerLink]="['/booking/add/', sh.showId]"
+                        class="focus--box-shadow"
+                        type="button"
+                        style="color: #fc5185"
+                      >
+                        Book
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</section>

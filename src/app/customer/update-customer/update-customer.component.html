@@ -1,0 +1,66 @@
+<section id="detailMovie">
+  <form (ngSubmit)="updateACustomer()">
+    <div class="container">
+      <div class="details">
+        <div class="row flexbox-center">
+          <div class="col-lg-5 text-lg-left text-center"></div>
+          <div class="col-lg-7">
+            <div class="movieDetails-content">
+              <h2>Customer Updation Form</h2>
+              <p>{{ cust.customerName }}</p>
+              <ul>
+                <li>
+                  <div class="movieDetail-left">Customer Name:</div>
+                  <input
+                    class="movieDetail-right"
+                    [(ngModel)]="cust.customerName"
+                    name="name"
+                  />
+                </li>
+                <li>
+                  <div class="movieDetail-left">Email:</div>
+                  <input
+                    type="email"
+                    class="movieDetail-right"
+                    [(ngModel)]="cust.email"
+                    name="email"
+                  />
+                </li>
+                <li>
+                  <div class="movieDetail-left">Mobile Number:</div>
+                  <input
+                    class="movieDetail-right"
+                    [(ngModel)]="cust.mobileNumber"
+                    name="number"
+                  />
+                </li>
+                <li>
+                  <div class="movieDetail-left">Password:</div>
+                  <input
+                    class="movieDetail-right"
+                    [(ngModel)]="cust.password"
+                    name="password"
+                  />
+                </li>
+                <li>
+                  <div class="movieDetail-left">Address:</div>
+                  <input
+                    class="movieDetail-right"
+                    [(ngModel)]="cust.address"
+                    name="address"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="theme-btn1">
+          <i class="icofont-ticket"></i> Update
+        </button>
+        <a [routerLink]="['']" class="theme-btn"
+          ><i class="icofont-ticket"></i> Cancel</a
+        >
+      </div>
+    </div>
+  </form>
+</section>

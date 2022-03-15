@@ -1,0 +1,56 @@
+<section>
+  <div class="custom-container">
+    <h3 style="color: red">{{ errorMessage }}</h3>
+    <form [formGroup]="theatreform" (ngSubmit)="addATheatre()">
+      <div class="form-row">
+        <div class="form-group">
+          <div class="input-data">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="theatreName"
+              required
+            />
+            <div class="underline"></div>
+            <label for="">Theatre Name</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="theatreCity"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Theatre City</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="managerContact"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Manager Contact</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" class="btn btn-primary">Add Theatre</button>
+      </div>
+    </form>
+  </div>
+</section>

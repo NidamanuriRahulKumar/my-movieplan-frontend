@@ -1,0 +1,76 @@
+<section>
+  <div class="custom-container">
+    <h3 style="color: red">{{ errorMessage }}</h3>
+    <form [formGroup]="customerForm" (ngSubmit)="addACustomer()">
+      <div class="form-row">
+        <div class="form-group">
+          <div class="input-data">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="customerName"
+              required
+            />
+            <div class="underline"></div>
+            <label for="">Customer Name</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="address"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Address</label>
+            </div>
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="mobileNumber"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Mobile Number</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <div class="row">
+            <div class="col input-data">
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Email Id</label>
+            </div>
+            <div class="col input-data">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="password"
+                required
+              />
+              <div class="underline"></div>
+              <label for="">Password</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Add Customer</button>
+      </div>
+    </form>
+  </div>
+</section>
